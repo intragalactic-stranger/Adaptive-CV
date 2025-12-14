@@ -1,0 +1,145 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+% Formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\begin{document}
+
+% Heading with optional logo
+\BLOCK{if resume.logo_path}
+\begin{minipage}[c]{0.15\textwidth}
+    \includegraphics[width=\linewidth,keepaspectratio]{\VAR{resume.logo_path}}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.8\textwidth}
+\BLOCK{endif}
+\begin{center}
+    \textbf{\Huge \scshape \VAR{resume.contact.name | escape_tex}} \\ \vspace{1pt}
+    \small 
+    \BLOCK{if resume.contact.phone}
+    \VAR{resume.contact.phone | escape_tex} $|$ 
+    \BLOCK{endif}
+    \BLOCK{if resume.contact.email}
+    \href{mailto:\VAR{resume.contact.email}}{\underline{\VAR{resume.contact.email | escape_tex}}} $|$ 
+    \BLOCK{endif}
+    \BLOCK{if resume.contact.linkedin}
+    \href{\VAR{resume.contact.linkedin}}{\underline{LinkedIn}} $|$
+    \BLOCK{endif}
+    \BLOCK{if resume.contact.github}
+    \href{\VAR{resume.contact.github}}{\underline{GitHub}} $|$
+    \BLOCK{endif}
+    \BLOCK{if resume.contact.website}
+    \href{\VAR{resume.contact.website}}{\underline{Website}}
+    \BLOCK{endif}
+\end{center}
+\BLOCK{if resume.logo_path}
+\end{minipage}
+\BLOCK{endif}
+
+% Summary
+\BLOCK{if resume.summary}
+\section{Professional Summary}
+\small{\VAR{resume.summary | escape_tex}}
+\BLOCK{endif}
+
+% Education
+\section{Education}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\BLOCK{for edu in resume.education}
+  \resumeSubheading
+    {\VAR{edu.institution | escape_tex}}{\VAR{edu.start_date | escape_tex} -- \VAR{edu.end_date | escape_tex}}
+    {\VAR{edu.degree | escape_tex}}{\VAR{edu.gpa | escape_tex}}
+\BLOCK{endfor}
+\end{itemize}
+
+% Experience
+\section{Experience}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\BLOCK{for exp in resume.experience}
+  \resumeSubheading
+    {\VAR{exp.company | escape_tex}}{\VAR{exp.start_date | escape_tex} -- \VAR{exp.end_date | escape_tex}}
+    {\VAR{exp.position | escape_tex}}{}
+  \resumeItem{
+    \begin{itemize}
+    \BLOCK{for desc in exp.description}
+      \item \VAR{desc | escape_tex}
+    \BLOCK{endfor}
+    \end{itemize}
+  }
+\BLOCK{endfor}
+\end{itemize}
+
+% Projects
+\section{Projects}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\BLOCK{for proj in resume.projects}
+    \resumeProjectHeading
+    {\textbf{\VAR{proj.name | escape_tex}} $|$ \emph{\VAR{proj.technologies | escape_tex}}}{\VAR{proj.link | escape_tex}}
+    \resumeItem{
+      \begin{itemize}
+      \BLOCK{for desc in proj.description}
+        \item \VAR{desc | escape_tex}
+      \BLOCK{endfor}
+      \end{itemize}
+    }
+\BLOCK{endfor}
+\end{itemize}
+
+% Skills
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+ \small{\item{
+ \BLOCK{for skill in resume.skills}
+  \textbf{\VAR{skill.category | escape_tex}}: \VAR{", ".join(skill.skills) | escape_tex} \\
+ \BLOCK{endfor}
+ }}
+\end{itemize}
+
+% Custom Sections
+\BLOCK{for section in resume.custom_sections}
+\section{\VAR{section.title | escape_tex}}
+\begin{itemize}[leftmargin=0.15in, label={}]
+ \small{\item{
+ \begin{itemize}
+ \BLOCK{for item in section.items}
+  \item \VAR{item | escape_tex}
+ \BLOCK{endfor}
+ \end{itemize}
+ }}
+\end{itemize}
+\BLOCK{endfor}
+
+\end{document}

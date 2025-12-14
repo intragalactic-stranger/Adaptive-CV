@@ -1,0 +1,161 @@
+{
+  "contact": {
+    "name": "Ganeshan Arumuganainar",
+    "email": "ganeshanarumuganainar@gmail.com",
+    "phone": "+91 8169956401",
+    "linkedin": "linkedin.com/in/ganeshannainar",
+    "github": null,
+    "website": null,
+    "location": "Mumbai, India"
+  },
+  "summary": "Innovative Generative AI Engineer with a strong foundation in building enterprise-grade GenAI systems from concept to production. Experienced in developing scalable architectures, driving framework development, and enabling rapid prototyping of AI solutions in domains like healthcare, insurance, HR, and services. Proven ability in translating innovative business ideas into scalable and practical industry grade applications through a deep understanding of the GenAI stack, cloud-native development, and end-user experience.",
+  "education": [
+    {
+      "institution": "Mumbai University",
+      "degree": "B.E. (Computer Engineering with Honours in AI & ML)",
+      "start_date": null,
+      "end_date": "2024",
+      "gpa": "9.07/10.0"
+    },
+    {
+      "institution": "Maharashtra State",
+      "degree": "12th (HSC)",
+      "start_date": null,
+      "end_date": "2020",
+      "gpa": "87.08%"
+    },
+    {
+      "institution": "Maharashtra State",
+      "degree": "10th (SSC)",
+      "start_date": null,
+      "end_date": "2018",
+      "gpa": "92.80%"
+    }
+  ],
+  "experience": [
+    {
+      "company": "PibyThree Consulting Services Pvt Ltd.",
+      "position": "Associate Software Engineer (Generative AI)",
+      "start_date": "July 2024",
+      "end_date": "Present",
+      "description": [
+        "Led the architecture and development of robust, scalable Generative AI solutions, combining LLMs, modular RAG pipelines, and containerized microservices for production-grade deployment across AWS environment.",
+        "GenAI-In-A-Box Framework: Conceptualized and built an internal GenAI framework that standardizes and accelerates the full lifecycle of generative AI applications:",
+        "Designed plug-and-play pipelines for Modular, Hybrid, and Advanced RAG work\ufb02ows using Python, LangChain and LlamaIndex",
+        "Integrated evaluation frameworks (RAGAS, Giskard, Phoenix) and safety guardrails to ensure reliability and trustworthiness",
+        "Enabled seamless LLM integration (Gemini Flash/Pro, Claude Sonnet/Haiku, AI21 Models), with model-speci\ufb01c routing, function calling and chat history features",
+        "Delivered persistent, fault-tolerant Dockerized deployments using Docker, Docker Compose; deployed on AWS ECS(Fargate) along with services like ECR, VPC, ALB in place for scalable and secure api serving",
+        "Engineered backup-resilient VectorDB containers(FAISS, Chroma, Pinecone) using persistent volumes to ensure data durability and service uptime",
+        "Production-Ready Use Cases (FastAPI backend + Streamlit frontend):",
+        "Insurance Agent (Hybrid RAG): Built a domain-aware assistant with Gemini Pro + FAISS for precise policy retrieval and conversational answering",
+        "Hospitality Agent RAG with Function Calling: Combined LangChain Agents and MongoDB to enable full CRUD operations via natural language",
+        "Audiobook Generator: Developed a multimodal pipeline that transforms web/PDF content into spoken dialogues using Claude 3.7 Sonnet and generate conversational audio with AWS Polly",
+        "HR Candidate Pre-Screening RAG: Built a rerank-enhanced RAG that extracts structured insights from resumes and evaluates candidate \ufb01t",
+        "Website Concierge Chatbot: Designed and deployed an Advanced RAG-based assistant embedded into the company site to streamline customer queries and service navigation"
+      ]
+    },
+    {
+      "company": "K.J. Somaiya Institute of Technology",
+      "position": "Research Intern",
+      "start_date": "June 2023",
+      "end_date": "June 2024",
+      "description": [
+        "Implemented crop classi\ufb01cation system using Random Forest algorithm on multispectral satellite data, combining Landsat-8 and Sentinel-2 imagery to achieve 85% Classi\ufb01cation accuracy",
+        "Developed scipts in Google Earth Engine for processing satellite imagery and calculating crop acreage estimations across multiple districts",
+        "Conducted comprehensive 10-year time series analysis using phenological parameters (NDVI, LAI, FPAR)",
+        "Documented methodology and \ufb01ndings in detailed technical report, including data collection methods, pre-processing steps, and model architecture with results and conclusion"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Chronic Kidney Disease Prediction Using Hybrid Algorithms",
+      "technologies": null,
+      "link": null,
+      "description": [
+        "Developed a hybrid deep learning model using ANN and Cuckoo Search Algorithm to predict CKD.",
+        "Achieved 92% prediction accuracy through hyperparameter tuning.",
+        "Built a preprocessing pipeline that reduced data noise by 40%."
+      ]
+    },
+    {
+      "name": "Cross-Platform Course Comparison System",
+      "technologies": null,
+      "link": null,
+      "description": [
+        "Engineered an ML-powered tool to compare courses across Coursera, Udemy, and YouTube.",
+        "Implemented sentiment analysis using Random Forest and NLTK on user reviews and comments.",
+        "Designed a custom rating algorithm with Count Vectorizer, achieving 87% accuracy."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Core Competencies",
+      "skills": [
+        "Generative AI",
+        "Large Language Models (LLMs)",
+        "Machine Learning",
+        "Deep Learning"
+      ]
+    },
+    {
+      "category": "Programming Languages",
+      "skills": [
+        "C++",
+        "Python"
+      ]
+    },
+    {
+      "category": "Frameworks & Libraries",
+      "skills": [
+        "TensorFlow",
+        "FastAPI",
+        "Streamlit",
+        "LangChain",
+        "LlamaIndex"
+      ]
+    },
+    {
+      "category": "Platforms",
+      "skills": [
+        "Amazon Web Services (AWS)",
+        "Google Cloud Platform (GCP)",
+        "Snow\ufb02ake",
+        "Dataiku"
+      ]
+    },
+    {
+      "category": "Databases, Tools & DevOps",
+      "skills": [
+        "NoSQL",
+        "VectorDB (FAISS, Pinecone)",
+        "GraphDB (Neo4j)",
+        "Git",
+        "Github",
+        "Docker"
+      ]
+    }
+  ],
+  "custom_sections": [
+    {
+      "title": "CERTIFICATIONS",
+      "items": [
+        "Google Cloud Certi\ufb01ed Professional Machine Learning Engineer - Valid through Dec, 2026",
+        "AWS Certi\ufb01ed Cloud Practitioner - Valid through Dec, 2027",
+        "IELTS (Band 7.5/9.0) - Valid through Nov, 2025"
+      ]
+    },
+    {
+      "title": "ACHIEVEMENTS",
+      "items": [
+        "Student of the Year 2021 at SIES Graduate School of Technology",
+        "AIR 164 in ISRO Cyberspace Quizathon",
+        "Gold Medalist in International Mathematics Olympiad (at School level)",
+        "Winner of Promethean 2021 Technical Competition",
+        "Secured 4 th position at The Times of India Quizathon",
+        "1 st Place at InterSchool CyberQuizathon - GIZMO"
+      ]
+    }
+  ]
+}
