@@ -264,8 +264,9 @@ MIT License — feel free to use for any purpose.
 
 ## 👨‍💻 Team
 
-Built with ❤️ for hackathon by **[Your Team Name]**
-
+Built with ❤️ for hackathon by **PiCoders**
+Owner : Ganeshan Arumuganainar
+email : ganeshanarumuganainar@gmail.com
 ---
 
 ## 🙏 Acknowledgments
